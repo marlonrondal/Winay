@@ -399,7 +399,7 @@ hr .wave-separator {
     }
 
       .hero {
-         background-image: url('Images/img4.jpg');
+         background-image: url('/Images/img4.jpg');
         background-size: cover;
         background-attachment: fixed;
         flex-direction: column;
