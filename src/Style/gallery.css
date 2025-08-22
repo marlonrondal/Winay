@@ -1,0 +1,51 @@
+.masonry-gallery {
+  column-count: 4; /* número de columnas */
+  column-gap:10px; /* espacio entre columnas */
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.masonry-gallery img {
+  width: 100%;
+ gap:10px;
+  border-radius: 8px;
+}
+
+/* Lightbox base */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 2;
+
+    width: calc(100% - 40px);
+  }
+}

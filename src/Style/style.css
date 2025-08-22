@@ -1,0 +1,450 @@
+/* =======================
+   RESET & BASE
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #fffffe;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    width: 100%;
+    padding: 20px;
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%; /* ✅ Ahora ocupa todo el ancho */
+}
+
+.container-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #33272a;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ff8ba7;
+    
+}
+
+/* =======================
+   HERO
+======================= */
+.hero-section {
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    max-width: 100vw;
+    height: 600px; /* Ajusta la altura según prefieras */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para cubrir el contenedor */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* .hero-image::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 39, 42, 0.35);
+    z-index: 2;
+    pointer-events: none; 
+} */
+
+/* .text-hero {
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    max-width: 800px;
+} */
+
+/* Botón */
+.btn-hero {
+    background-color: #ff8ba7;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #ffc6c7;
+}
+
+/* =======================
+   ABOUT
+======================= */
+.About {
+    background-color: #F6ECDB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: auto;
+    margin: 60px 0 0 0;
+    padding: 60px;
+  
+}
+
+.about-image, .about-text {
+    max-width: 1200px; /* Limita el ancho de la imagen y el texto */
+    flex: 1;
+}
+.about-text {
+    max-width: 600px; /* Limita el ancho del texto */
+    color: #33272a;
+   margin: 0px;
+}
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #33272a;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;   /* O el valor que prefieras */
+    height: auto;       /* Mantiene la proporción natural */
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+/* =======================
+   SERVICIOS
+======================= */
+.servicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+
+.servicios h2 {
+    font-size: 1.8rem;
+    color: #33272a;
+    margin-bottom: 10px;
+}
+
+.servicios p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.servicios-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.servicios-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Servicios item */
+.gallery-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-item img {
+   
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(179, 78, 115, 0.5); /* Color y opacidad del overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.gallery-item:hover::after {
+    background: rgba(186, 53, 102, 0.5); /* Color y opacidad del overlay */
+}
+.gallery-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff;
+    background: none; /* Sin fondo, ya que el overlay lo cubre todo */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 80%;
+    box-sizing: border-box;
+    z-index: 2; /* Encima del overlay */
+}
+.gallery-item a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .gallery-item a:hover{
+        color: #ff8400;
+        text-decoration: none;
+    }
+/* =======================
+   CONTACTO
+======================= */
+.Contacto-section {
+    display: flex;
+    gap: 40px;
+    max-width: auto;
+    padding: 20px;
+  background-color: #FF9BA1;
+    flex-wrap: wrap;
+}
+.contacto-col {
+    flex: 1 1 0;
+    min-width: 280px;
+}
+.contacto, .social-media {
+    width: 100%;
+}
+.contacto h2, .social-media h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+   
+}
+.contacto p {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 0 20px; ;
+}
+.tlf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration-line: none;
+    color: #fff;
+}
+.tlf a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+    .About {
+        gap: 20px;
+    }
+    .servicios-items {
+        gap: 10px;
+    }
+    .Contacto-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+}
+
+hr .wave-separator {
+    border: 0;
+    height: 10px;
+    background: url('https://svgshare.com/i/13Ac.svg') repeat-x bottom;
+    background-size: 100vw 10px;
+    margin: 0;
+    width: 100vw;
+    display: block;
+    
+}
+
+
+@media (max-width: 768px) {
+    .container-header,
+    .hero-section,
+    .About,
+    .servicios-list,
+    .Contacto-section {
+        width: 100%; /* ✅ ancho total */
+        max-width: none; /* ❌ elimina límites */
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .About {
+        background-color: #F6ECDB;
+        flex-direction: column;
+        gap: 20px;
+        padding:30px 10px;
+       
+    }
+    .about-text h2, .about-text p {
+        color: #33272a;
+        text-align: center;
+    }
+    .about-image img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+    .servicios-items {
+        grid-template-columns: 1fr; /* ✅ servicios en una sola columna */
+    }
+    .gallery-item img {
+        max-width: 100%;
+    }
+
+      .hero {
+         background-image: url('Images/img4.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        flex-direction: column;
+        gap: 20px;
+        margin: 10px auto;
+        align-items: center;    /* Centra horizontalmente los hijos */
+        justify-content: center;
+        width: 100%;
+    }
+    .text-hero h2, p{
+        text-align: center;
+       color: #fff;
+        max-width: 100%;
+    }
+    .btn-hero{
+        margin: 20px auto 0 auto;
+        display: block;
+        padding: 10px 30px;
+        font-size: 1rem;
+
+    }
+    .hero-image {
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        align-items: center;    /* Centra verticalmente si la imagen tiene altura menor */
+    }
+    .hero-image img {
+        max-width: 100%;
+        margin: 0 auto;
+        display: none;
+    }
+    .servicios-items {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .gallery-item img {
+        
+        max-width: 100%;
+        height: 180px;
+    }
+  
+    .gallery-item h3 {
+        color: #fff;
+        font-size: 1.4rem;
+        padding: 8px 10px;
+    }
+}
